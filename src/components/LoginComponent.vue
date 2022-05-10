@@ -1,10 +1,10 @@
 <template>
-  <h1>D</h1>
+    <h1>Login component</h1>
 </template>
 
 <script>
 
 export default({
-  
+    
 })
 </script>

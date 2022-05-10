@@ -1,26 +1,46 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="wrapper">
+      <header-client />
+      <main>
+        <router-view></router-view>
+      </main>
+      <footer-client />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HeaderClient from "./layouts/HeaderClient.vue";
+import FooterClient from "./layouts/FooterClient.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HeaderClient,
+    FooterClient,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$main-bg-color: #323232;
+$pri-bg-color: #fff;
+$main-color: #fff;
+$pri-color: #000;
+$pc-width: 1230px;
+$normal-font: 16px;
+$main-bg-color-nav: #ffb850;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container{
+  background-color: $main-bg-color;
+}
+.fluid {
+  width: $pc-width;
+  margin: auto;
 }
 </style>
