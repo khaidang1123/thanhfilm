@@ -58,7 +58,7 @@ export default {
         if (this.count >= this.arrBanner.length - 1) {
           this.count = 0;
         }
-      }, 2000);
+      }, 3000);
     },
   },
   mounted() {

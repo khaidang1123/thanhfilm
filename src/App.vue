@@ -17,7 +17,7 @@ export default {
   name: "App",
   components: {
     HeaderClient,
-    FooterClient,
+    FooterClient
   },
 };
 </script>

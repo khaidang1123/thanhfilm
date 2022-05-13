@@ -23,7 +23,7 @@
             <div class="box-rank">
               <span class="position-rank rank2">2</span>
               <div class="desc">
-                <span class="film-name">Tranh thiên hạ</span>
+                <span class="film-name">Tỗi chưa bao...</span>
                 <span class="film-desc">Tranh thiên hạ</span>
               </div>
               <div class="rank-point">
@@ -34,7 +34,7 @@
             <div class="box-rank">
               <span class="position-rank rank3">3</span>
               <div class="desc">
-                <span class="film-name">Tranh thiên hạ</span>
+                <span class="film-name">Cô phương bất...</span>
                 <span class="film-desc">Tranh thiên hạ</span>
               </div>
               <div class="rank-point">
@@ -45,7 +45,7 @@
             <div class="box-rank">
               <span class="position-rank rank4">4</span>
               <div class="desc">
-                <span class="film-name">Tranh thiên hạ</span>
+                <span class="film-name">Quân vương bất...</span>
                 <span class="film-desc">Tranh thiên hạ</span>
               </div>
               <div class="rank-point">
@@ -56,7 +56,7 @@
             <div class="box-rank">
               <span class="position-rank rank5">5</span>
               <div class="desc">
-                <span class="film-name">Tranh thiên hạ</span>
+                <span class="film-name">Khi cây trà trổ...</span>
                 <span class="film-desc">Tranh thiên hạ</span>
               </div>
               <div class="rank-point">
@@ -70,28 +70,55 @@
           <h2>Phim đề cử</h2>
           <div class="main-box-film">
             <div class="item">
-              <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+              <router-link to="/">
+                <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+                <div class="count-star">
+                  <span>4.5</span>
+                  <font-awesome-icon icon="star" class="star" />
+                </div>
+              </router-link>
             </div>
             <div class="item">
               <img src="https://bilutv.link/film/20605/poster.jpg" alt="" />
+              <div class="count-star">
+                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              </div>
             </div>
             <div class="item">
               <img src="https://bilutv.link/film/20603/poster.jpg" alt="" />
+              <div class="count-star">
+                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              </div>
             </div>
             <div class="item">
               <img src="https://bilutv.link/film/20529/poster.jpg" alt="" />
+              <div class="count-star">
+                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              </div>
             </div>
             <div class="item">
               <img src="https://bilutv.link/film/20615/poster.jpg" alt="" />
+              <div class="count-star">
+                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              </div>
             </div>
             <div class="item">
               <img src="https://bilutv.link/film/20611/poster.jpg" alt="" />
+              <div class="count-star">
+                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              </div>
             </div>
             <div class="item">
               <img src="https://bilutv.link/film/20405/poster.jpg" alt="" />
+              <div class="count-star">
+                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              </div>
             </div>
             <div class="item">
               <img src="https://bilutv.link/film/20647/poster.jpg" alt="" />
+              <div class="count-star">
+                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              </div>
             </div>
           </div>
         </section>
@@ -106,28 +133,57 @@
         <h2>PHIM CHIẾU RẠP</h2>
         <div class="main-box-film">
           <div class="item">
-            <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+            <router-link to="/">
+              <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+              <div class="count-star">
+                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              </div>
+              <div class="film-content">
+                a
+              </div>
+            </router-link>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20605/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20603/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20529/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20615/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20611/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20405/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20647/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
         </div>
       </div>
@@ -135,73 +191,87 @@
         <h2>PHIM BỘ</h2>
         <div class="main-box-film">
           <div class="item">
-            <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+            <router-link to="/">
+              <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+              <div class="count-star">
+                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              </div>
+            </router-link>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20605/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20603/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20529/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20615/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20611/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20405/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20647/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20529/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20615/poster.jpg" alt="" />
+            <div class="count-star">
+              <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
           </div>
         </div>
       </div>
       <div class="cinema-film">
         <h2>REVIEW PHIM</h2>
-        <div class="main-box-film">
-          <VueSlickCarousel :arrows="true" :dots="true">
-            <div class="item">
-              <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+        <Carousel :settings="settings" :wrapAround="true">
+          <Slide v-for="slide of arrSlide" :key="slide">
+            <div class="carousel__item">
+              <router-link to="/">
+                <img :src="slide" alt="" />
+                <div class="espisode_status">
+                  <span>HOT</span>
+                </div>
+              </router-link>
             </div>
-            <div class="item">
-              <img src="https://bilutv.link/film/20605/poster.jpg" alt="" />
-            </div>
-            <div class="item">
-              <img src="https://bilutv.link/film/20603/poster.jpg" alt="" />
-            </div>
-            <div class="item">
-              <img src="https://bilutv.link/film/20529/poster.jpg" alt="" />
-            </div>
-            <div class="item">
-              <img src="https://bilutv.link/film/20615/poster.jpg" alt="" />
-            </div>
-            <div class="item">
-              <img src="https://bilutv.link/film/20611/poster.jpg" alt="" />
-            </div>
-            <div class="item">
-              <img src="https://bilutv.link/film/20405/poster.jpg" alt="" />
-            </div>
-            <div class="item">
-              <img src="https://bilutv.link/film/20647/poster.jpg" alt="" />
-            </div>
-            <div class="item">
-              <img src="https://bilutv.link/film/20529/poster.jpg" alt="" />
-            </div>
-            <div class="item">
-              <img src="https://bilutv.link/film/20615/poster.jpg" alt="" />
-            </div>
-          </VueSlickCarousel>
-        </div>
+          </Slide>
+
+          <template #addons>
+            <Navigation />
+          </template>
+        </Carousel>
       </div>
     </div>
   </div>
@@ -209,18 +279,102 @@
 
 <script>
 import BannerComponent from "./BannerComponent.vue";
-const VueSlickCarousel = require("vue-slick-carousel");
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import { Carousel, Navigation, Slide } from "vue3-carousel/dist/carousel.es";
+import "vue3-carousel/dist/carousel.css";
 export default {
+  data() {
+    return {
+      settings: {
+        itemsToShow: 4,
+        snapAlign: "center",
+      },
+      arrSlide: [
+        "https://bilutv.link/film/20643/poster.jpg",
+        "https://bilutv.link/film/20605/poster.jpg",
+        "https://bilutv.link/film/20603/poster.jpg",
+        "https://bilutv.link/film/20529/poster.jpg",
+        "https://bilutv.link/film/20615/poster.jpg",
+        "https://bilutv.link/film/20611/poster.jpg",
+        "https://bilutv.link/film/20405/poster.jpg",
+        "https://bilutv.link/film/20647/poster.jpg",
+        "https://bilutv.link/film/20529/poster.jpg",
+        "https://bilutv.link/film/20615/poster.jpg",
+      ],
+    };
+  },
+  methods: {},
   components: {
     BannerComponent,
-    VueSlickCarousel,
+    Carousel,
+    Slide,
+    Navigation,
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.carousel__slide > .carousel__item {
+  transform: scale(1);
+  opacity: 0.5;
+  transition: 0.5s;
+  color: #fff;
+  width: 100%;
+  img {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+.carousel__slide--visible > .carousel__item {
+  opacity: 1;
+  transform: rotateY(0);
+  width: 80%;
+  .espisode_status {
+    @extend %attach_review;
+  }
+}
+.carousel__slide--next > .carousel__item {
+  transform: scale(0.9) translate(-10px);
+  .espisode_status {
+    @extend %attach_review;
+  }
+}
+.carousel__slide--prev > .carousel__item {
+  transform: scale(0.9) translate(10px);
+  .espisode_status {
+    @extend %attach_review;
+  }
+}
+.carousel__slide--active > .carousel__item {
+  transform: scale(1.1);
+  width: 80%;
+  .espisode_status {
+    @extend %attach_review;
+  }
+}
+%count-star {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background: green;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  * {
+    margin: 0 2px;
+  }
+}
+%attach_review {
+  @extend %count-star;
+  border-radius: 0px ;
+  background-color: #fa6400;
+  padding: 3px 25px !important;
+  left: 0;
+  right: unset;
+  margin: 8px;
+}
 .box-film {
   display: grid;
   grid-template-columns: 2fr 5fr;
@@ -238,12 +392,21 @@ export default {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-row-gap: 20px;
       .item {
+        position: relative;
         width: 85%;
         margin: auto;
+        .count-star {
+          @extend %count-star;
+        }
         img {
           width: 100%;
           margin: auto;
           border-radius: 15px;
+          cursor: pointer;
+        }
+        .film-content{
+          position: absolute;
+          bottom: 50px;
         }
       }
     }
@@ -303,7 +466,8 @@ export default {
           display: flex;
           flex-direction: column;
           .film-name {
-            font-size: 22px;
+            font-size: 20px;
+            width: 90%;
           }
           .film-desc {
             font-size: 16px;
@@ -335,9 +499,15 @@ export default {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
     .item {
+      position: relative;
       width: 100%;
       margin: auto;
       padding: 10px;
+      .count-star {
+        @extend %count-star;
+        top: 10px;
+        right: 33px;
+      }
       img {
         border-radius: 15px;
         width: 90%;

@@ -17,14 +17,18 @@
     "ionicons": "^6.0.1",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1",
+    "slick-vuejs": "^1.0.9",
     "vue": "^3.2.13",
     "vue-ionicons": "^3.0.5",
     "vue-router": "^4.0.15",
-    "vue-slick-carousel": "^1.0.6"
+    "vue-slick-carousel": "^1.0.6",
+    "vue3-carousel": "^0.1.40"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@types/node": "^17.0.31",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
