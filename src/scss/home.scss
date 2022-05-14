@@ -1,3 +1,5 @@
+@import "../scss/responsive-homepage.scss";
+
 %count-star {
     position: absolute;
     top: 0;
@@ -13,10 +15,15 @@
     * {
         margin: 0 2px;
     }
+
+    @include mobile {
+        font-size: 12px
+    }
 }
 
 %espisode {
     @extend %count-star;
+    border-radius: 0px;
     border-radius: 0px;
     background-color: #fa6400;
     padding: 3px 25px !important;
@@ -30,6 +37,10 @@
     font-size: larger;
     margin: 15px 0;
     letter-spacing: 0.05em;
+
+    @include mobile {
+        font-size: 12px;
+    }
 }
 
 %carousel_slide {
@@ -67,17 +78,16 @@
 }
 
 .carousel__slide--next>.carousel__item {
-    transform: scale(0.9) translate(-10px);
+        transform: scale(0.9) translate(-10px);
 
-    .espisode_status {
-        @extend %espisode;
+        .espisode_status {
+            @extend %espisode;
+        }
+
+        .actor-name {
+            color: #fff;
+        }
     }
-
-    .actor-name {
-        color: #fff;
-    }
-}
-
 .carousel__slide--prev>.carousel__item {
     transform: scale(0.9) translate(10px);
 
@@ -102,12 +112,17 @@
     }
 
 }
-
 .box-film {
     display: grid;
     grid-template-columns: 2fr 5fr;
     width: 100%;
     margin: 40px auto;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
 
     section {
         h2 {
@@ -120,7 +135,9 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-row-gap: 20px;
             position: relative;
-
+            @include mobile{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
             .item {
                 position: relative;
                 width: 85%;
@@ -150,11 +167,19 @@
             display: flex;
             align-items: center;
 
+            @include mobile {
+                justify-content: center;
+            }
+
             h2 {
                 font-size: 16px;
                 margin: 35px 0;
                 display: inline !important;
                 color: yellow;
+
+                @include mobile {
+                    font-size: 18px;
+                }
             }
 
             #title-right {
@@ -162,6 +187,10 @@
                 font-size: 22px;
                 margin: 35px 15px;
                 font-style: italic;
+
+                @include mobile {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -169,6 +198,11 @@
             display: grid;
             grid-auto-columns: 1fr;
             width: 80%;
+
+            @include mobile {
+                width: 90%;
+                margin: auto;
+            }
 
             .box-rank {
                 color: #fff;
@@ -179,11 +213,19 @@
                 padding: 15px 0;
                 margin: 15px 0;
 
+                @include mobile {
+                    grid-template-columns: 50px 1fr 80px;
+                }
+
                 .position-rank {
                     width: 24px;
                     height: 35px;
                     font: 700 36px Impact;
                     font-style: italic;
+
+                    @include mobile {
+                        font-size: 24px;
+                    }
                 }
 
                 .rank1 {
@@ -213,11 +255,19 @@
                     .film-name {
                         font-size: 20px;
                         width: 90%;
+
+                        @include mobile {
+                            font-size: 18px;
+                        }
                     }
 
                     .film-desc {
                         font-size: 16px;
                         color: #999;
+
+                        @include mobile {
+                            font-size: 14px;
+                        }
                     }
                 }
 
@@ -243,6 +293,10 @@
     h2 {
         color: #fff;
         margin: 40px 0;
+
+        @include mobile {
+            font-size: 18px;
+        }
     }
 
     .main-box-film {
@@ -250,6 +304,13 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 30px;
         width: 100%;
+
+        @include mobile {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 15px;
+            width: 92%;
+            margin: auto;
+        }
 
         .item {
             position: relative;
@@ -274,9 +335,10 @@
                 margin: auto;
                 display: block;
                 width: 100%;
-                background-image: linear-gradient(to right, rgba(130,50,50,0.6), rgba(0,0,0,1));
+                background-image: linear-gradient(to right, rgba(130, 50, 50, 0.6), rgba(0, 0, 0, 1));
                 transform: translateY(100%);
                 transition: all .6s;
+
                 .name {
                     text-decoration: none;
                     color: #fff;
@@ -293,7 +355,8 @@
                     width: 90%;
                     text-overflow: ellipsis;
                 }
-                &-active{
+
+                &-active {
                     transform: translateY(0%);
                     transition: all .6s;
                 }
@@ -315,6 +378,10 @@
     .icon-film {
         color: red;
         font-size: 24px;
+
+        @include mobile {
+            margin-left: 20px;
+        }
     }
 
     h2 {
@@ -324,5 +391,9 @@
         font-size: 22px;
         padding-left: 15px;
         font-family: "Open Sans", sans-serif;
+
+        @include mobile {
+            font-size: 20px;
+        }
     }
 }

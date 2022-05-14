@@ -1,3 +1,4 @@
+@import "../scss/responsive-homepage.scss";
 
 %top-bottom-banner-animate {
     content: "";
@@ -29,6 +30,11 @@
 .banner {
     position: relative;
     display: flex;
+    width: 100%;
+
+    @include mobile {
+        flex-direction: column-reverse;
+    }
 
     img {
         width: 100%;
@@ -36,6 +42,10 @@
 
     .top-animate-banner {
         @extend %top-bottom-banner-animate;
+
+        @include mobile {
+            visibility: hidden
+        }
     }
 
     .bottom-animate-banner {
@@ -44,10 +54,18 @@
         top: unset;
         height: 300px;
         background: linear-gradient(to top, #333, transparent);
+
+        @include mobile {
+            visibility: hidden
+        }
     }
 
     .left-animate-banner {
         @extend %left-right-banner-animate;
+
+        @include mobile {
+            visibility: hidden
+        }
     }
 
     .right-animate-banner {
@@ -56,12 +74,21 @@
         position: absolute;
         right: 0;
         left: unset;
+
+        @include mobile {
+            visibility: hidden
+        }
     }
 
     .list-cate {
         position: absolute;
         bottom: 0px;
         width: 100%;
+
+        @include mobile {
+            position: static;
+            bottom: unset;
+        }
 
         .main-list-cate {
             display: grid;
@@ -87,6 +114,11 @@
                         font-size: 20px;
                         font-family: "Open Sans", sans-serif;
                         letter-spacing: 0.05em;
+
+                        @include mobile {
+                            font-size: 14px;
+                            padding: 0 15px;
+                        }
                     }
 
                     a:hover {
@@ -108,7 +140,9 @@
             display: flex;
             align-items: center;
             position: relative;
-
+            @include mobile{
+                display: none;
+            }
             >li {
                 background-color: #ffd650;
                 width: 100%;

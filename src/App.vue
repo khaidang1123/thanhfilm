@@ -26,6 +26,7 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import "./scss/responsive-homepage.scss";
 $main-bg-color: #323232;
 $pri-bg-color: #fff;
 $main-color: #fff;
@@ -45,5 +46,18 @@ $main-bg-color-nav: #ffb850;
 .fluid {
   width: $pc-width;
   margin: auto;
+  @include mobile {
+    width: fit-content;
+  }
+}
+.carousel__next {
+  @include mobile {
+    right: 20px !important;
+  }
+}
+.carousel__prev {
+  @include mobile {
+    left: 20px !important;
+  }
 }
 </style>

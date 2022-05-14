@@ -1,5 +1,6 @@
 <template>
   <div class="banner">
+    <div class="main-banner"></div>
     <div class="top-animate-banner"></div>
     <div class="left-animate-banner"></div>
     <img :src="currentBanner" alt="" />
@@ -22,6 +23,9 @@
           </li>
           <li>
             <router-link to="">REVIEW PHIM</router-link>
+          </li>
+          <li>
+            <font-awesome-icon icon="chevronDown" class="chevron" />
           </li>
         </ul>
         <ul

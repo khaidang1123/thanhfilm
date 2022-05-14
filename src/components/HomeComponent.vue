@@ -138,13 +138,20 @@
           <h2>Phim chiếu rạp</h2>
         </div>
         <div class="main-box-film">
-          <div class="item" @mouseover="filmContentActive = true" @mouseout="filmContentActive = false">
+          <div
+            class="item"
+            @mouseover="filmContentActive = true"
+            @mouseout="filmContentActive = false"
+          >
             <router-link to="/">
               <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
               <div class="count-star">
                 <span>4.5</span> <font-awesome-icon icon="star" class="star" />
               </div>
-              <div class="film-content" :class="{'film-content-active': filmContentActive}">
+              <div
+                class="film-content"
+                :class="{ 'film-content-active': filmContentActive }"
+              >
                 <h3 class="name">Tân tây du ký</h3>
                 <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
@@ -279,7 +286,7 @@
           <font-awesome-icon icon="film" class="icon-film" />
           <h2>Review phim</h2>
         </div>
-        <Carousel :settings="settings" :wrapAround="true">
+        <Carousel :settings="settings" :breakpoints="breakpoints" :wrapAround="true">
           <Slide v-for="slide of arrSlide" :key="slide">
             <div class="carousel__item">
               <router-link to="/">
@@ -301,7 +308,11 @@
           <font-awesome-icon icon="film" class="icon-film" />
           <h2>Diễn viên nổi bật</h2>
         </div>
-        <Carousel :settings="settings" :wrapAround="true">
+        <Carousel
+          :settings="settings"
+          :breakpoints="breakpoints"
+          :wrapAround="true"
+        >
           <Slide v-for="(actor, index) of arActor" :key="index">
             <div class="carousel__item">
               <router-link to="/">
@@ -314,7 +325,7 @@
           </Slide>
 
           <template #addons>
-            <Navigation />
+            <Navigation style="display: none" />
           </template>
         </Carousel>
       </div>
@@ -387,7 +398,22 @@ export default {
           name: "TRỊNH NGHIỆP THÀNH",
         },
       ],
-      filmContentActive: false
+      filmContentActive: false,
+      breakpoints: {
+        0: {
+          itemsToShow: 3,
+          snapAlign: "center",
+        },
+        700: {
+          itemsToShow: 4,
+          snapAlign: "center",
+        },
+        // 1024 and up
+        1024: {
+          itemsToShow: 4,
+          snapAlign: "center",
+        },
+      },
     };
   },
   methods: {},
