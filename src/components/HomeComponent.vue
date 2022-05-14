@@ -67,7 +67,10 @@
           </div>
         </aside>
         <section>
-          <h2>Phim đề cử</h2>
+          <div class="title-film">
+            <font-awesome-icon icon="film" class="icon-film" />
+            <h2>Phim đề cử</h2>
+          </div>
           <div class="main-box-film">
             <div class="item">
               <router-link to="/">
@@ -129,8 +132,11 @@
           alt=""
         />
       </div>
-      <div class="cinema-film">
-        <h2>PHIM CHIẾU RẠP</h2>
+      <div class="cinema">
+        <div class="title-film">
+          <font-awesome-icon icon="film" class="icon-film" />
+          <h2>Phim chiếu rạp</h2>
+        </div>
         <div class="main-box-film">
           <div class="item">
             <router-link to="/">
@@ -139,7 +145,8 @@
                 <span>4.5</span> <font-awesome-icon icon="star" class="star" />
               </div>
               <div class="film-content">
-                a
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
             </router-link>
           </div>
@@ -147,6 +154,10 @@
             <img src="https://bilutv.link/film/20605/poster.jpg" alt="" />
             <div class="count-star">
               <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
+            <div class="film-content">
+              <h3 class="name">Tân tây du ký</h3>
+              <span class="desc">Siêu phẩm tân tây du kí với...</span>
             </div>
           </div>
           <div class="item">
@@ -187,8 +198,11 @@
           </div>
         </div>
       </div>
-      <div class="cinema-film">
-        <h2>PHIM BỘ</h2>
+      <div class="cinema">
+        <div class="title-film">
+          <font-awesome-icon icon="film" class="icon-film" />
+          <h2>Phim bộ</h2>
+        </div>
         <div class="main-box-film">
           <div class="item">
             <router-link to="/">
@@ -196,12 +210,18 @@
               <div class="count-star">
                 <span>4.5</span> <font-awesome-icon icon="star" class="star" />
               </div>
+              <div class="espisode_status">
+                <span>15/17</span>
+              </div>
             </router-link>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20605/poster.jpg" alt="" />
             <div class="count-star">
               <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
+            <div class="espisode_status">
+              <span>Full</span>
             </div>
           </div>
           <div class="item">
@@ -254,8 +274,11 @@
           </div>
         </div>
       </div>
-      <div class="cinema-film">
-        <h2>REVIEW PHIM</h2>
+      <div class="cinema">
+        <div class="title-film">
+          <font-awesome-icon icon="film" class="icon-film" />
+          <h2>Review phim</h2>
+        </div>
         <Carousel :settings="settings" :wrapAround="true">
           <Slide v-for="slide of arrSlide" :key="slide">
             <div class="carousel__item">
@@ -313,206 +336,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.carousel__slide > .carousel__item {
-  transform: scale(1);
-  opacity: 0.5;
-  transition: 0.5s;
-  color: #fff;
-  width: 100%;
-  img {
-    width: 100%;
-    cursor: pointer;
-  }
-}
-.carousel__slide--visible > .carousel__item {
-  opacity: 1;
-  transform: rotateY(0);
-  width: 80%;
-  .espisode_status {
-    @extend %attach_review;
-  }
-}
-.carousel__slide--next > .carousel__item {
-  transform: scale(0.9) translate(-10px);
-  .espisode_status {
-    @extend %attach_review;
-  }
-}
-.carousel__slide--prev > .carousel__item {
-  transform: scale(0.9) translate(10px);
-  .espisode_status {
-    @extend %attach_review;
-  }
-}
-.carousel__slide--active > .carousel__item {
-  transform: scale(1.1);
-  width: 80%;
-  .espisode_status {
-    @extend %attach_review;
-  }
-}
-%count-star {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px 10px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  background: green;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  * {
-    margin: 0 2px;
-  }
-}
-%attach_review {
-  @extend %count-star;
-  border-radius: 0px ;
-  background-color: #fa6400;
-  padding: 3px 25px !important;
-  left: 0;
-  right: unset;
-  margin: 8px;
-}
-.box-film {
-  display: grid;
-  grid-template-columns: 2fr 5fr;
-  width: 100%;
-  margin: 40px auto;
-  section {
-    h2 {
-      font-size: 28px;
-      margin: 30px 0;
-      display: block !important;
-      color: #fff;
-    }
-    .main-box-film {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-row-gap: 20px;
-      .item {
-        position: relative;
-        width: 85%;
-        margin: auto;
-        .count-star {
-          @extend %count-star;
-        }
-        img {
-          width: 100%;
-          margin: auto;
-          border-radius: 15px;
-          cursor: pointer;
-        }
-        .film-content{
-          position: absolute;
-          bottom: 50px;
-        }
-      }
-    }
-  }
-  aside {
-    .title {
-      display: flex;
-      align-items: center;
-      h2 {
-        font-size: 16px;
-        margin: 35px 0;
-        display: inline !important;
-        color: yellow;
-      }
-      #title-right {
-        color: #fff;
-        font-size: 22px;
-        margin: 35px 15px;
-        font-style: italic;
-      }
-    }
-
-    .ranked {
-      display: grid;
-      grid-auto-columns: 1fr;
-      width: 80%;
-      .box-rank {
-        color: #fff;
-        display: grid;
-        grid-template-columns: 50px 1fr 40px;
-        cursor: pointer;
-        border-bottom: 1px solid #999;
-        padding: 15px 0;
-        margin: 15px 0;
-        .position-rank {
-          width: 24px;
-          height: 35px;
-          font: 700 36px Impact;
-          font-style: italic;
-        }
-        .rank1 {
-          color: #ff4f34;
-        }
-        .rank2 {
-          color: #fa6400;
-        }
-        .rank3 {
-          color: #ffb802;
-        }
-        .rank4 {
-          color: #999;
-        }
-        .rank5 {
-          color: #999;
-        }
-        .desc {
-          display: flex;
-          flex-direction: column;
-          .film-name {
-            font-size: 20px;
-            width: 90%;
-          }
-          .film-desc {
-            font-size: 16px;
-            color: #999;
-          }
-        }
-        .rank-point {
-          display: flex;
-          align-items: center;
-          color: #ff008c;
-          span {
-            margin: 7px;
-          }
-        }
-      }
-    }
-  }
-}
-.sub-banner img {
-  width: 100%;
-}
-.cinema-film {
-  h2 {
-    color: #fff;
-    margin: 40px 0;
-  }
-  .main-box-film {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 15px;
-    .item {
-      position: relative;
-      width: 100%;
-      margin: auto;
-      padding: 10px;
-      .count-star {
-        @extend %count-star;
-        top: 10px;
-        right: 33px;
-      }
-      img {
-        border-radius: 15px;
-        width: 90%;
-      }
-    }
-  }
-}
+@import "../scss/home.scss";
 </style>

@@ -16,6 +16,4 @@
       "scripthost"
     ],
   },
-  "noImplicitAny": false,
-  "allowJs": true,
 }

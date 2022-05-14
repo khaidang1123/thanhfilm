@@ -13,17 +13,19 @@
 <script>
 import HeaderClient from "./layouts/HeaderClient.vue";
 import FooterClient from "./layouts/FooterClient.vue";
+import * as $ from "jquery";
 export default {
   name: "App",
   components: {
     HeaderClient,
-    FooterClient
+    FooterClient,
   },
 };
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 $main-bg-color: #323232;
 $pri-bg-color: #fff;
 $main-color: #fff;
@@ -35,8 +37,9 @@ $main-bg-color-nav: #ffb850;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
-.container{
+.container {
   background-color: $main-bg-color;
 }
 .fluid {
