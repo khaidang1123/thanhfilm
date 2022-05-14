@@ -138,13 +138,13 @@
           <h2>Phim chiếu rạp</h2>
         </div>
         <div class="main-box-film">
-          <div class="item">
+          <div class="item" @mouseover="filmContentActive = true" @mouseout="filmContentActive = false">
             <router-link to="/">
               <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
               <div class="count-star">
                 <span>4.5</span> <font-awesome-icon icon="star" class="star" />
               </div>
-              <div class="film-content">
+              <div class="film-content" :class="{'film-content-active': filmContentActive}">
                 <h3 class="name">Tân tây du ký</h3>
                 <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
@@ -296,6 +296,28 @@
           </template>
         </Carousel>
       </div>
+      <div class="cinema">
+        <div class="title-film">
+          <font-awesome-icon icon="film" class="icon-film" />
+          <h2>Diễn viên nổi bật</h2>
+        </div>
+        <Carousel :settings="settings" :wrapAround="true">
+          <Slide v-for="(actor, index) of arActor" :key="index">
+            <div class="carousel__item">
+              <router-link to="/">
+                <img :src="actor.avatar" alt="" />
+                <div class="actor-name">
+                  <span>{{ actor.name }}</span>
+                </div>
+              </router-link>
+            </div>
+          </Slide>
+
+          <template #addons>
+            <Navigation />
+          </template>
+        </Carousel>
+      </div>
     </div>
   </div>
 </template>
@@ -323,6 +345,49 @@ export default {
         "https://bilutv.link/film/20529/poster.jpg",
         "https://bilutv.link/film/20615/poster.jpg",
       ],
+      arActor: [
+        {
+          avatar: "https://bilutv.link/actor/21590/poster.jpg",
+          name: "TRIỆU LỘ TƯ",
+        },
+        {
+          avatar: "https://bilutv.link/actor/3187/poster.jpg?v=1641877800",
+          name: "DƯƠNG MỊCH",
+        },
+        {
+          avatar: "https://bilutv.link/actor/3460/poster.jpg?v=1641873797",
+          name: "ĐỊCH LỆ NHIỆT BA",
+        },
+        {
+          avatar: "https://bilutv.link/actor/3453/poster.jpg?v=1641873875",
+          name: "DƯƠNG DƯƠNG",
+        },
+        {
+          avatar: "https://bilutv.link/actor/709/poster.jpg?v=1641873683",
+          name: "TRIỆU LỆ DĨNH",
+        },
+        {
+          avatar: "https://bilutv.link/actor/1131/poster.jpg?v=1641681782",
+          name: "CHÂU TINH TRÌ",
+        },
+        {
+          avatar: "https://bilutv.link/actor/3654/poster.jpg?v=1641862387",
+          name: "TRỊNH SẢNG",
+        },
+        {
+          avatar: "https://bilutv.link/actor/22667/poster.jpg",
+          name: "HỨA KHẢI",
+        },
+        {
+          avatar: "https://bilutv.link/actor/23307/poster.jpg",
+          name: "KIỀU MINH TUẤN",
+        },
+        {
+          avatar: "https://bilutv.link/actor/5226/poster.jpg",
+          name: "TRỊNH NGHIỆP THÀNH",
+        },
+      ],
+      filmContentActive: false
     };
   },
   methods: {},

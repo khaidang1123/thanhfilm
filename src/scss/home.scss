@@ -22,7 +22,21 @@
     padding: 3px 25px !important;
     left: 0;
     right: unset;
-    margin: 8px;
+    margin: 5px;
+}
+
+%actor-name {
+    color: #fff;
+    font-size: larger;
+    margin: 15px 0;
+    letter-spacing: 0.05em;
+}
+
+%carousel_slide {
+    width: auto;
+    height: auto;
+    max-width: 210px;
+    max-height: 400px;
 }
 
 .carousel__slide>.carousel__item {
@@ -46,6 +60,10 @@
     .espisode_status {
         @extend %espisode;
     }
+
+    .actor-name {
+        @extend %actor-name;
+    }
 }
 
 .carousel__slide--next>.carousel__item {
@@ -53,6 +71,10 @@
 
     .espisode_status {
         @extend %espisode;
+    }
+
+    .actor-name {
+        color: #fff;
     }
 }
 
@@ -62,15 +84,23 @@
     .espisode_status {
         @extend %espisode;
     }
+
+    .actor-name {
+        color: #fff;
+    }
 }
 
 .carousel__slide--active>.carousel__item {
     transform: scale(1.1);
-    width: 80%;
 
     .espisode_status {
         @extend %espisode;
     }
+
+    .actor-name {
+        color: #fff;
+    }
+
 }
 
 .box-film {
@@ -218,45 +248,62 @@
     .main-box-film {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 15px;
+        grid-gap: 30px;
+        width: 100%;
 
         .item {
             position: relative;
             width: 100%;
             margin: auto;
-            padding: 10px;
+            overflow: hidden;
 
             .count-star {
                 @extend %count-star;
-                top: 10px;
-                right: 33px;
             }
 
             .espisode_status {
                 @extend %espisode;
-                top: 7px;
                 left: 15px;
             }
 
             .film-content {
+                position: absolute;
+                bottom: 0;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                margin: auto;
+                display: block;
+                width: 100%;
+                background-image: linear-gradient(to right, rgba(130,50,50,0.6), rgba(0,0,0,1));
+                transform: translateY(100%);
+                transition: all .6s;
                 .name {
                     text-decoration: none;
                     color: #fff;
                     margin: 5px 0;
                     font-weight: 500;
+                    margin: 15px 0 5px 15px;
                 }
 
                 .desc {
                     margin-top: 5px;
                     display: block;
                     color: #999;
+                    margin: 0 0 15px 15px;
+                    width: 90%;
+                    text-overflow: ellipsis;
+                }
+                &-active{
+                    transform: translateY(0%);
+                    transition: all .6s;
                 }
             }
 
             img {
                 border-radius: 15px;
-                width: 90%;
+                width: 100%;
             }
+
         }
     }
 }
