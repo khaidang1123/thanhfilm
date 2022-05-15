@@ -24,9 +24,6 @@
           <li>
             <router-link to="/">REVIEW PHIM</router-link>
           </li>
-          <li>
-            <font-awesome-icon icon="chevronDown" class="chevron" />
-          </li>
         </ul>
         <ul
           class="categories"
@@ -63,7 +60,7 @@
             <router-link to="/">PHIM BỘ</router-link>
           </li>
           <li>
-            <font-awesome-icon icon="CircleChevronDown" />
+            <font-awesome-icon icon="angle-down" class="angle-down"/>
           </li>
         </ul>
       </div>

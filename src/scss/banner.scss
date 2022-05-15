@@ -48,7 +48,7 @@
                 margin: 10px 0;
                 overflow: hidden;
 
-                a {
+                a{
                     text-decoration: none;
                     color: #fff;
                     padding: 10px 50px 0 0;
@@ -133,7 +133,7 @@
                     list-style-type: none;
                     border-bottom: 1px solid #999;
 
-                    a {
+                    a{
                         text-align: left;
                         width: 100%;
                         padding: 15px;
@@ -220,6 +220,11 @@
     display: none;
     @extend %list-cate;
     overflow: hidden;
+    color: #fff;
+    .angle-down{
+        padding: 0 20px;
+        cursor: pointer;
+    }
     @include mobile{
         display: block;
         position: static;

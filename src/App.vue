@@ -47,7 +47,7 @@ $main-bg-color-nav: #ffb850;
   width: $pc-width;
   margin: auto;
   @include mobile {
-    width: fit-content;
+    width: auto;
   }
 }
 .carousel__next {
