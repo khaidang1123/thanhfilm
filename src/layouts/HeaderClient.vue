@@ -4,9 +4,11 @@
       <div class="logo">
         <router-link to="/">
           <img
+            class="logo-pc"
             src="https://gw.alicdn.com/tfs/TB1ugm9f5cKOu4jSZKbXXc19XXa-356-76.png"
             alt=""
           />
+          <img class="logo-mobile" src="../assets/youku.png" alt="" />
         </router-link>
       </div>
       <div class="box-search">
@@ -27,10 +29,8 @@
           <router-link to="/register">Đăng ký</router-link>
           <router-link to="/login" class="login">Đăng nhập</router-link>
         </div>
-        <div class="user-mobile">
-          <router-link to="/login">
-            <font-awesome-icon icon="user" class="user-icon" />
-          </router-link>
+        <div class="bars-mobile">
+          <font-awesome-icon icon="bars" class="bars-icon" />
         </div>
       </div>
     </div>

@@ -10,19 +10,19 @@
       <div class="main-list-cate">
         <ul class="box-list-cate">
           <li>
-            <router-link to="">PHIM CHIẾU RẠP</router-link>
+            <router-link to="/">PHIM CHIẾU RẠP</router-link>
           </li>
           <li>
-            <router-link to="">PHIM VIỆT NAM</router-link>
+            <router-link to="/">PHIM VIỆT NAM</router-link>
           </li>
           <li>
-            <router-link to="">PHIM BỘ</router-link>
+            <router-link to="/">PHIM BỘ</router-link>
           </li>
           <li>
-            <router-link to="">PHIM LẺ</router-link>
+            <router-link to="/">PHIM LẺ</router-link>
           </li>
           <li>
-            <router-link to="">REVIEW PHIM</router-link>
+            <router-link to="/">REVIEW PHIM</router-link>
           </li>
           <li>
             <font-awesome-icon icon="chevronDown" class="chevron" />
@@ -46,6 +46,24 @@
               <li><router-link to="/">Cổ trang</router-link></li>
               <li><router-link to="/">Hiện đại</router-link></li>
             </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="list-cate-mobile">
+      <div class="main-list-cate">
+        <ul class="box-list-cate">
+          <li>
+            <router-link to="/">PHIM CHIẾU RẠP</router-link>
+          </li>
+          <li>
+            <router-link to="/">PHIM VIỆT NAM</router-link>
+          </li>
+          <li>
+            <router-link to="/">PHIM BỘ</router-link>
+          </li>
+          <li>
+            <font-awesome-icon icon="CircleChevronDown" />
           </li>
         </ul>
       </div>
@@ -87,5 +105,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/banner.scss';
+@import "../scss/banner.scss";
 </style>

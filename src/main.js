@@ -1,6 +1,7 @@
 import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSearch, faBell, faHome, faClockRotateLeft as history, faBars, faFire, faStar, faFilm, faUser, faChevronDown as chevronDown} from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faBell, faHome, faClockRotateLeft as history, faBars, faFire, 
+    faStar, faFilm, faUser, faChevronDown as chevronDown, faCircleChevronDown} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -16,7 +17,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes
 })
-library.add(faSearch, faBell, faHome, history, faBars, faFire, faStar, faFilm, faUser, chevronDown)
+library.add(faSearch, faBell, faHome, history, faBars, faFire, faStar, faFilm, faUser, chevronDown, faCircleChevronDown)
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.config.productionTip = false;
