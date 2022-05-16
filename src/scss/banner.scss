@@ -213,20 +213,22 @@
     @extend %list-cate;
 
     @include mobile {
-        display: none;
-    }
-}
-.list-cate-mobile{
-    display: none;
-    @extend %list-cate;
-    overflow: hidden;
-    color: #fff;
-    .angle-down{
-        padding: 0 20px;
-        cursor: pointer;
-    }
-    @include mobile{
-        display: block;
         position: static;
+        overflow-x: scroll;
+        scrollbar-width: none;
     }
 }
+// .list-cate-mobile{
+//     display: none;
+//     @extend %list-cate;
+//     overflow: hidden;
+//     color: #fff;
+//     .angle-down{
+//         padding: 0 20px;
+//         cursor: pointer;
+//     }
+//     @include mobile{
+//         display: block;
+//         position: static;
+//     }
+// }

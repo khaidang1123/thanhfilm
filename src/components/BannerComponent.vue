@@ -47,24 +47,6 @@
         </ul>
       </div>
     </nav>
-    <nav class="list-cate-mobile">
-      <div class="main-list-cate">
-        <ul class="box-list-cate">
-          <li>
-            <router-link to="/">PHIM CHIẾU RẠP</router-link>
-          </li>
-          <li>
-            <router-link to="/">PHIM VIỆT NAM</router-link>
-          </li>
-          <li>
-            <router-link to="/">PHIM BỘ</router-link>
-          </li>
-          <li>
-            <font-awesome-icon icon="angle-down" class="angle-down"/>
-          </li>
-        </ul>
-      </div>
-    </nav>
   </div>
 </template>
 
