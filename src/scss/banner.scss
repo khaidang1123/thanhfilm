@@ -38,16 +38,22 @@
         width: 1200px;
         margin: auto;
         justify-content: center;
-
+        @include mobile{
+            width: 600px;
+        }
         .box-list-cate {
             margin: 15px 0;
             display: flex;
+            @include mobile{
+                width: 120%;
+                margin: initial auto;
+                padding-left: 12px;
+            }
 
             li {
                 list-style: none;
                 margin: 10px 0;
                 overflow: hidden;
-
                 a{
                     text-decoration: none;
                     color: #fff;
@@ -59,7 +65,9 @@
 
                     @include mobile {
                         font-size: 14px;
-                        padding: 0 15px;
+                        padding: 0 ;
+                        margin: 0 10px;
+                        
                     }
                 }
 
@@ -215,7 +223,7 @@
     @include mobile {
         position: static;
         overflow-x: scroll;
-        scrollbar-width: none;
+        width: auto;
     }
 }
 // .list-cate-mobile{
