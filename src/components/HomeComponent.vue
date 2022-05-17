@@ -73,7 +73,7 @@
           </div>
           <div class="main-box-film">
             <div class="item">
-              <router-link to="/">
+              <router-link to="/phim/a">
                 <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
                 <div class="count-star">
                   <span>4.5</span>

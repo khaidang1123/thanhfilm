@@ -41,6 +41,9 @@
         @include mobile{
             width: 600px;
         }
+        @include mobile-small{
+            width: 550px;
+        }
         .box-list-cate {
             margin: 15px 0;
             display: flex;
@@ -67,8 +70,11 @@
                         font-size: 14px;
                         padding: 0 ;
                         margin: 0 10px;
-                        
                     }
+                    @include mobile-small {
+                        font-size: small;
+                    }
+
                 }
 
                 a:hover {
@@ -226,17 +232,3 @@
         width: auto;
     }
 }
-// .list-cate-mobile{
-//     display: none;
-//     @extend %list-cate;
-//     overflow: hidden;
-//     color: #fff;
-//     .angle-down{
-//         padding: 0 20px;
-//         cursor: pointer;
-//     }
-//     @include mobile{
-//         display: block;
-//         position: static;
-//     }
-// }

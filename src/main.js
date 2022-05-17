@@ -9,10 +9,12 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeComponent from './components/HomeComponent.vue'
 import LoginComponent from './components/LoginComponent.vue'
+import FilmDetailComponent from './components/FilmDetailComponent.vue'
 const $ = require('jquery');
 const routes = [
     { path: '/', component: HomeComponent },
     { path: '/login', component: LoginComponent },
+    {path: '/phim/:slug', component: FilmDetailComponent}
 ]
 
 const router = createRouter({
