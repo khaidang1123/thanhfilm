@@ -80,6 +80,10 @@
                   <font-awesome-icon icon="star" class="star" />
                 </div>
               </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du kí với...</span>
+              </div>
             </div>
             <div class="item">
               <img src="https://bilutv.link/film/20605/poster.jpg" alt="" />
@@ -148,14 +152,11 @@
               <div class="count-star">
                 <span>4.5</span> <font-awesome-icon icon="star" class="star" />
               </div>
-              <div
-                class="film-content"
-                :class="{ 'film-content-active': filmContentActive }"
-              >
-                <h3 class="name">Tân tây du ký</h3>
-                <span class="desc">Siêu phẩm tân tây du kí với...</span>
-              </div>
             </router-link>
+            <div class="film-content">
+              <h3 class="name">Tân tây du ký</h3>
+              <span class="desc">Siêu phẩm tân tây du kí với...</span>
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20605/poster.jpg" alt="" />
@@ -172,11 +173,19 @@
             <div class="count-star">
               <span>4.5</span> <font-awesome-icon icon="star" class="star" />
             </div>
+            <div class="film-content">
+              <h3 class="name">Tân tây du ký</h3>
+              <span class="desc">Siêu phẩm tân tây du dsajdhasjkd</span>
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20529/poster.jpg" alt="" />
             <div class="count-star">
               <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
+            <div class="film-content">
+              <h3 class="name">Tân tây du ký</h3>
+              <span class="desc">Siêu phẩm tân tây du kí với...</span>
             </div>
           </div>
           <div class="item">
@@ -184,11 +193,19 @@
             <div class="count-star">
               <span>4.5</span> <font-awesome-icon icon="star" class="star" />
             </div>
+            <div class="film-content">
+              <h3 class="name">Tân tây du ký</h3>
+              <span class="desc">Siêu phẩm tân tây du kí với...</span>
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20611/poster.jpg" alt="" />
             <div class="count-star">
               <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
+            <div class="film-content">
+              <h3 class="name">Tân tây du ký</h3>
+              <span class="desc">Siêu phẩm tân tây du kí với...</span>
             </div>
           </div>
           <div class="item">
@@ -196,11 +213,19 @@
             <div class="count-star">
               <span>4.5</span> <font-awesome-icon icon="star" class="star" />
             </div>
+            <div class="film-content">
+              <h3 class="name">Tân tây du ký</h3>
+              <span class="desc">Siêu phẩm tân tây du kí với...</span>
+            </div>
           </div>
           <div class="item">
             <img src="https://bilutv.link/film/20647/poster.jpg" alt="" />
             <div class="count-star">
               <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+            </div>
+            <div class="film-content">
+              <h3 class="name">Tân tây du ký</h3>
+              <span class="desc">Siêu phẩm tân tây du kí với...</span>
             </div>
           </div>
         </div>
@@ -286,7 +311,11 @@
           <font-awesome-icon icon="film" class="icon-film" />
           <h2>Review phim</h2>
         </div>
-        <Carousel :settings="settings" :breakpoints="breakpoints" :wrapAround="true">
+        <Carousel
+          :settings="settings"
+          :breakpoints="breakpoints"
+          :wrapAround="true"
+        >
           <Slide v-for="slide of arrSlide" :key="slide">
             <div class="carousel__item">
               <router-link to="/">
@@ -295,6 +324,12 @@
                   <span>HOT</span>
                 </div>
               </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc"
+                  >Siêu phẩm tân tây du dsajdhasjkdđâsdsads</span
+                >
+              </div>
             </div>
           </Slide>
 

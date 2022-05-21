@@ -52,7 +52,7 @@
                   :class="{ 'film-content-active': filmContentActive }"
                 >
                   <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du sdadsdasdas...</span>
+                  <span class="desc">Siêu phẩm tân tây du dsajdhasjkd</span>
                 </div>
               </router-link>
             </div>
@@ -63,14 +63,11 @@
                   <span>4.5</span>
                   <font-awesome-icon icon="star" class="star" />
                 </div>
-                <div
-                  class="film-content"
-                  :class="{ 'film-content-active': filmContentActive }"
-                >
-                  <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du dsajdhasjkd</span>
-                </div>
               </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du dsajdhasjkd</span>
+              </div>
             </div>
             <div class="item">
               <router-link to="/">
