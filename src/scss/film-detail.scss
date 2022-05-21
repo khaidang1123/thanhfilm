@@ -86,7 +86,7 @@
             display: none;
 
             h3 {
-                font-size: 36px;
+                font-size: 28px;
                 padding-top: 15px;
                 text-transform: capitalize;
             }
@@ -315,13 +315,21 @@
                                 rgba(0, 0, 0, 1));
                         transform: translateY(100%);
                         transition: all 0.6s;
-
+                        @include mobile{
+                            position: static;
+                            transform: unset;
+                            background-image: unset;
+                            font-size: 90%;
+                        }
                         .name {
                             text-decoration: none;
                             color: #fff;
                             margin: 5px 0;
                             font-weight: 500;
                             margin: 15px 0 5px 15px;
+                            @include mobile{
+                                margin: 5px 0;
+                            }
                         }
 
                         .desc {
@@ -331,6 +339,11 @@
                             margin: 0 0 15px 15px;
                             width: 90%;
                             text-overflow: ellipsis;
+                            @include mobile{
+                                margin: 0;
+                                width: 100%;
+                                font-size: small;
+                            }
                         }
 
                         &-active {

@@ -52,7 +52,7 @@
                   :class="{ 'film-content-active': filmContentActive }"
                 >
                   <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du kí với...</span>
+                  <span class="desc">Siêu phẩm tân tây du ...</span>
                 </div>
               </router-link>
             </div>
@@ -68,7 +68,7 @@
                   :class="{ 'film-content-active': filmContentActive }"
                 >
                   <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du kí với...</span>
+                  <span class="desc">Siêu phẩm tân tây du ...</span>
                 </div>
               </router-link>
             </div>
@@ -84,7 +84,7 @@
                   :class="{ 'film-content-active': filmContentActive }"
                 >
                   <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du kí với...</span>
+                  <span class="desc">Siêu phẩm tân tây du ...</span>
                 </div>
               </router-link>
             </div>
@@ -100,7 +100,7 @@
                   :class="{ 'film-content-active': filmContentActive }"
                 >
                   <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du kí với...</span>
+                  <span class="desc">Siêu phẩm tân tây du ...</span>
                 </div>
               </router-link>
             </div>
@@ -116,7 +116,7 @@
                   :class="{ 'film-content-active': filmContentActive }"
                 >
                   <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du kí với...</span>
+                  <span class="desc">Siêu phẩm tân tây du ...</span>
                 </div>
               </router-link>
             </div>
@@ -132,7 +132,7 @@
                   :class="{ 'film-content-active': filmContentActive }"
                 >
                   <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du kí với...</span>
+                  <span class="desc">Siêu phẩm tân tây du ...</span>
                 </div>
               </router-link>
             </div>
@@ -148,7 +148,7 @@
                   :class="{ 'film-content-active': filmContentActive }"
                 >
                   <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du kí với...</span>
+                  <span class="desc">Siêu phẩm tân tây du ...</span>
                 </div>
               </router-link>
             </div>
@@ -164,7 +164,7 @@
                   :class="{ 'film-content-active': filmContentActive }"
                 >
                   <h3 class="name">Tân tây du ký</h3>
-                  <span class="desc">Siêu phẩm tân tây du kí với...</span>
+                  <span class="desc">Siêu phẩm tân tây du ...</span>
                 </div>
               </router-link>
             </div>

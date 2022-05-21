@@ -325,6 +325,9 @@
             .espisode_status {
                 @extend %espisode;
                 left: 15px;
+                @include mobile{
+                    display: none;
+                }
             }
 
             .film-content {
@@ -338,7 +341,6 @@
                 background-image: linear-gradient(to right, rgba(130, 50, 50, 0.6), rgba(0, 0, 0, 1));
                 transform: translateY(100%);
                 transition: all .6s;
-
                 .name {
                     text-decoration: none;
                     color: #fff;
