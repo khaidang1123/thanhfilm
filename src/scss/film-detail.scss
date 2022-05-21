@@ -322,6 +322,8 @@
                             color: #999;
                             margin: 0 0 15px 15px;
                             width: 90%;
+                            overflow: hidden;
+                            white-space: nowrap;
                             text-overflow: ellipsis;
                             @include mobile{
                                 margin: 0;
@@ -348,6 +350,9 @@
             color: #c5c5c5;
             font-weight: 400;
             width: 100%;
+            @include mobile{
+                font-size: 95%;
+            }
 
             h5 {
                 display: inline;
@@ -436,6 +441,9 @@
                 .main-ranked {
                     width: 85%;
                     margin: auto;
+                    @include mobile{
+                        width: 96%;
+                    }
 
                     .box-rank {
                         div {
@@ -492,18 +500,18 @@
                                 font-size: 20px;
                                 width: 90%;
 
-                                // @include mobile {
-                                //   font-size: 18px;
-                                // }
+                                @include mobile {
+                                  font-size: 18px;
+                                }
                             }
 
                             .film-desc {
                                 font-size: 16px;
                                 color: #999;
 
-                                // @include mobile {
-                                //   font-size: 14px;
-                                // }
+                                @include mobile {
+                                  font-size: 14px;
+                                }
                             }
                         }
 
