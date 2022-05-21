@@ -179,7 +179,6 @@
             placeholder="Viết bình luận..."
           ></textarea>
           <div class="comment-action">
-            <span class="count-comment-text"><span>0</span>/300</span>
             <button>Bình luận</button>
           </div>
         </div>
@@ -216,8 +215,7 @@
                   placeholder="Viết phản hồi..."
                 ></textarea>
                 <div class="comment-action">
-                  <span class="count-comment-text"><span>0</span>/300</span>
-                  <button>Bình luận</button>
+                  <button>Phản hồi</button>
                 </div>
               </div>
               <div class="show-all-response-comment">

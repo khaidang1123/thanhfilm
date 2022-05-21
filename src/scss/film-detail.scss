@@ -4,9 +4,9 @@
     position: relative;
 
     textarea {
-        width: 100%;
+        padding: 10px 10px 0 10px;
+        width: calc(100% - 20px);
         height: 120px;
-        padding: 10px 0 0 10px;
         font-size: 18px;
         border-radius: 6px;
         resize: none;
@@ -16,7 +16,6 @@
         outline: none;
 
         @include mobile {
-            width: 98%;
             margin: auto;
             font-size: 14px;
             height: 100px;
@@ -24,29 +23,14 @@
     }
 
     .comment-action {
-        position: absolute;
-        bottom: 15px;
-        right: 5px;
-
-        @include mobile {
-            right: 3%;
-        }
-
-        .count-comment-text {
-            color: #b0b0b0;
-            margin-right: 10px;
-            font-size: 18px;
-
-            @include mobile {
-                font-size: 14px;
-            }
-        }
-
+        margin-top: 10px;
+        display: flex;
+        justify-content: end;
         button {
             width: 140px;
             height: 40px;
-            border-radius: 20px;
-            background: linear-gradient(to bottom right, #ff008c, #fd34a3);
+            border-radius: 8px;
+            background: linear-gradient(to bottom right, #ff008c, #53a23f);
             font-size: 17px;
             color: #fff;
             border: none;
@@ -421,9 +405,13 @@
 
                     .box-response-active {
                         @extend %box-comment;
-                        width: 100%;
                         margin-top: 15px;
                         display: block;
+                        textarea{
+                            @include mobile{
+                               height: 80px;
+                            }
+                        }
                     }
 
                     .show-all-response-comment {
