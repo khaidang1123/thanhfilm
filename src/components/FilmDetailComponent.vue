@@ -3,6 +3,10 @@
     <div class="film-detail-top">
       <div class="main-video"></div>
 
+      <div class="title-mobile">
+        <h3 class="film-name-mobile">Tranh thiên hạ</h3>
+        <h5 class="count-espisode-mobile">50 tập</h5>
+      </div>
       <div class="espisode">
         <div class="main-espisode">
           <h3>Tranh thiên hạ</h3>

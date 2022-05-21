@@ -79,6 +79,29 @@
         display: grid;
         grid-template-columns: 70% 30%;
 
+        .title-mobile {
+            width: 96%;
+            margin: auto;
+            color: #fff;
+            display: none;
+
+            h3 {
+                font-size: 36px;
+                padding-top: 15px;
+                text-transform: capitalize;
+            }
+
+            h5 {
+                color: #c5c5c5;
+                font-weight: 200px;
+                margin: 15px 5px;
+            }
+
+            @include mobile {
+                display: block;
+            }
+        }
+
         @include mobile {
             grid-template-columns: 1fr;
         }
@@ -103,7 +126,7 @@
             font-weight: 400;
 
             @include mobile {
-                height: 160px;
+                height: fit-content;
                 overflow-y: hidden;
                 overflow-x: scroll;
                 background-color: transparent;
@@ -112,7 +135,8 @@
             .main-espisode {
                 width: 90%;
                 margin: auto;
-                @include mobile{
+
+                @include mobile {
                     width: 96%;
                 }
             }
@@ -121,12 +145,20 @@
                 font-size: 36px;
                 padding-top: 15px;
                 text-transform: capitalize;
+
+                @include mobile {
+                    display: none;
+                }
             }
 
             h5 {
                 color: #c5c5c5;
                 font-weight: 200px;
                 margin: 15px 5px;
+
+                @include mobile {
+                    display: none;
+                }
             }
 
             .list-espisode {
@@ -147,16 +179,18 @@
                     font-size: 20px;
                     padding: 3px 0;
                     width: 100%;
+
                     @include mobile {
                         background-color: #444;
                         border-radius: 6px;
                         width: 150px;
                     }
-                    p{
-                        @include mobile{
+
+                    p {
+                        @include mobile {
                             display: flex;
-                        align-items: center;
-                        justify-content: center;
+                            align-items: center;
+                            justify-content: center;
                             width: 50px;
                             height: 40px;
                         }
