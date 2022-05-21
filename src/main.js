@@ -2,7 +2,7 @@ import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
     faSearch, faBell, faHome, faClockRotateLeft as history, faBars, faFire,
-    faStar, faFilm, faUser, faAngleDown
+    faStar, faFilm, faUser, faAngleDown, faHeart
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { createApp } from 'vue'
@@ -22,7 +22,7 @@ const router = createRouter({
     routes
 })
 library.add(faSearch, faBell, faHome, history, faBars, faFire,
-    faStar, faFilm, faUser, faAngleDown)
+    faStar, faFilm, faUser, faAngleDown, faHeart)
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.config.productionTip = false;
