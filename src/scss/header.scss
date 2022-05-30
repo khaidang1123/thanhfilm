@@ -21,7 +21,6 @@ header {
     background-color: transparent;
     width: 1230px;
     margin: auto;
-    overflow: hidden;
 
     @include mobile {
       width: 95%;
@@ -215,6 +214,59 @@ header {
       .user {
         @include mobile {
           display: none;
+        }
+
+        .logged-action {
+          display: none;
+          position: relative;
+          img {
+            width: 35px;
+            cursor: pointer;
+          }
+          .nav-user{
+            position: absolute;
+            background-color: #000;
+            top: 20px;
+            right: 0;
+            width: 200px;
+            border-radius: 8px;
+            transform: translateX(50px);
+            visibility: hidden;
+            opacity: 0;
+            transition: .4s;
+            &.user-action-expand{
+              transform: translateX(0px);
+              opacity: 1;
+              visibility: visible;
+              transition: .4s;
+            }
+            li{
+              list-style-type: none;
+              button{
+                width: 100%;
+                text-align: left;
+              }
+              a, button{
+                padding: 15px 10px;
+                display: block;
+                color: #fff;
+                &:hover{
+                  border-radius: 8px;
+                  box-shadow: 0 4px 10px #ffb850;
+                }
+              }
+            }
+          }
+        }
+
+        &.logged-in {
+          .logged-action {
+            display: inline;
+          }
+
+          button {
+            display: none;
+          }
         }
       }
 
@@ -440,11 +492,12 @@ header {
             padding: 9px 0;
             display: block;
             background-color: transparent;
-            color: #999;
+            color: #fff;
             outline: none;
             border: none;
             border-bottom: 1px solid #c5c5c5;
             font-size: 16px;
+            margin-top: 40px;
           }
 
           button {

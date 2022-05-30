@@ -25,9 +25,23 @@
             <font-awesome-icon icon="history" class="history-icon" />
           </div>
         </div>
-        <div class="user">
-          <button class="register" @click="authActive = false, authBox = true">Đăng ký</button>
-          <button class="login" @click="authBox = true">Đặng nhập</button>
+        <div class="user" :class="{ 'logged-in': isLogin }">
+          <button
+            class="register"
+            @click="(authActive = false), (authBox = true)"
+          >
+            Đăng ký
+          </button>
+          <button class="login" @click="authBox = true">Đăng nhập</button>
+          <div class="logged-action">
+            <img src="../assets/user-icon.png" @click="isUserActionExpand = !isUserActionExpand" alt="" />
+            <ul class="nav-user" :class="{'user-action-expand': isUserActionExpand}">
+              <li><routerLink to="">Xin chào: {{userInfo.name}}</routerLink></li>
+              <li><routerLink to="">Quản lý tài khoản</routerLink></li>
+              <li><routerLink to="">Đổi mật khẩu</routerLink></li>
+              <li><button @click="logout(), isUserActionExpand = false">Đăng xuất</button></li>
+            </ul>
+          </div>
         </div>
         <div class="bars-mobile">
           <font-awesome-icon icon="bars" class="bars-icon" />
@@ -35,10 +49,14 @@
       </div>
     </div>
   </header>
-  <div class="auth-box" :class="{'auth-box-active': authBox}">
+  <div class="auth-box" :class="{ 'auth-box-active': authBox }">
     <div class="action-box">
       <div class="main-auth">
-        <font-awesome-icon icon="times" class="icon-close" @click="authBox = false, authActive = true" />
+        <font-awesome-icon
+          icon="times"
+          class="icon-close"
+          @click="(authBox = false), (authActive = true)"
+        />
         <div class="auth-direct">
           <h3 :class="{ 'auth-active': authActive }" @click="authActive = true">
             ĐĂNG NHẬP
@@ -51,14 +69,16 @@
           </h3>
         </div>
         <div class="item-box" :hidden="!authActive">
-          <form action="">
+          <form @submit.prevent="loginAction()">
             <div class="main-form-login">
               <input
+                v-model="dataLogin.email"
                 type="text"
                 formControlName="email"
                 placeholder="Nhập email của bạn..."
               />
               <input
+                v-model="dataLogin.password"
                 type="password"
                 formControlName="password"
                 placeholder="Nhập mật khẩu..."
@@ -77,19 +97,22 @@
           </form>
         </div>
         <div class="item-box" :hidden="authActive">
-          <form action="">
+          <form @submit.prevent="registerAction()">
             <div class="main-form-login">
               <input
-                type="password"
+                v-model="dataRegister.name"
+                type="text"
                 formControlName="password"
                 placeholder="Nhập tên tài khoản..."
               />
               <input
+                v-model="dataRegister.email"
                 type="text"
                 formControlName="email"
                 placeholder="Nhập email của bạn..."
               />
               <input
+                v-model="dataRegister.password"
                 type="password"
                 formControlName="password"
                 placeholder="Nhập mật khẩu..."
@@ -116,12 +139,29 @@
   </div>
 </template>
 <script>
+import {
+  login as apiLogin,
+  register as apiRegister,
+  getUser,
+} from "../api/ApiUser";
 export default {
   data() {
     return {
+      dataLogin: {
+        email: "",
+        password: "",
+      },
+      dataRegister: {
+        name: "",
+        email: "",
+        password: "",
+      },
+      userInfo: "",
+      isLogin: false,
+      isUserActionExpand: false,
       headerActive: false,
       authActive: true,
-      authBox: false
+      authBox: false,
     };
   },
   methods: {
@@ -134,9 +174,52 @@ export default {
         }
       };
     },
+    loginAction() {
+      apiLogin(this.dataLogin)
+        .then((res) => {
+          localStorage.setItem("token", res.data);
+        })
+        .then(() => {
+          this.dataLogin = {};
+          this.authBox = false;
+          this.checkLogin();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+
+    registerAction() {
+      apiRegister(this.dataRegister)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    checkLogin() {
+      const token = localStorage.getItem("token");
+      if (token) {
+        getUser(token).then((res) => {
+          this.userInfo = res.data;
+          this.isLogin = true;
+        });
+      } else {
+        this.isLogin = false;
+      }
+    },
+    logout(){
+      const token = localStorage.getItem("token");
+      if(token){
+        localStorage.removeItem("token")
+        this.checkLogin()
+      }
+    }
   },
   mounted() {
     this.checkPosition();
+    this.checkLogin();
   },
 };
 </script>
