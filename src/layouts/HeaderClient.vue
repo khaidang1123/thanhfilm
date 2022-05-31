@@ -34,12 +34,25 @@
           </button>
           <button class="login" @click="authBox = true">Đăng nhập</button>
           <div class="logged-action">
-            <img src="../assets/user-icon.png" @click="isUserActionExpand = !isUserActionExpand" alt="" />
-            <ul class="nav-user" :class="{'user-action-expand': isUserActionExpand}">
-              <li><routerLink to="">Xin chào: {{userInfo.name}}</routerLink></li>
+            <img
+              src="../assets/user-icon.png"
+              @click="isUserActionExpand = !isUserActionExpand"
+              alt=""
+            />
+            <ul
+              class="nav-user"
+              :class="{ 'user-action-expand': isUserActionExpand }"
+            >
+              <li>
+                <routerLink to="">Xin chào: {{ userInfo.name }}</routerLink>
+              </li>
               <li><routerLink to="">Quản lý tài khoản</routerLink></li>
               <li><routerLink to="">Đổi mật khẩu</routerLink></li>
-              <li><button @click="logout(), isUserActionExpand = false">Đăng xuất</button></li>
+              <li>
+                <button @click="logout(), (isUserActionExpand = false)">
+                  Đăng xuất
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -52,37 +65,63 @@
   <div class="auth-box" :class="{ 'auth-box-active': authBox }">
     <div class="action-box">
       <div class="main-auth">
+        <div
+          class="alert-err"
+          :class="{
+            'error-active': alert.length > 0,
+            'alert-success': success,
+          }"
+        >
+          <p>{{ alert }}</p>
+        </div>
         <font-awesome-icon
           icon="times"
           class="icon-close"
-          @click="(authBox = false), (authActive = true)"
+          @click="
+            (authBox = false),
+              (authActive = true),
+              (dataLogin = {}),
+              (dataRegister = {}),
+              (alert = '')
+          "
         />
         <div class="auth-direct">
-          <h3 :class="{ 'auth-active': authActive }" @click="authActive = true">
+          <h3
+            :class="{ 'auth-active': authActive }"
+            @click="(authActive = true), (alert = ''), dataRegister = {}"
+          >
             ĐĂNG NHẬP
           </h3>
           <h3
             :class="{ 'auth-active': !authActive }"
-            @click="authActive = false"
+            @click="(authActive = false), (alert = ''), dataLogin = {}"
           >
             ĐĂNG KÝ
           </h3>
         </div>
         <div class="item-box" :hidden="!authActive">
           <form @submit.prevent="loginAction()">
-            <div class="main-form-login">
+            <div class="main-form" :class="{'form-has-error': typeof alert != 'string'}">
               <input
                 v-model="dataLogin.email"
                 type="text"
                 formControlName="email"
                 placeholder="Nhập email của bạn..."
+                autocomplete="off"
               />
+              <span class="validate-err" v-if="alert.email">{{
+                alert.email[0]
+              }}</span>
               <input
                 v-model="dataLogin.password"
                 type="password"
                 formControlName="password"
                 placeholder="Nhập mật khẩu..."
+                autocomplete="off"
               />
+              <span class="validate-err" v-if="alert.password">{{
+                alert.password[0]
+              }}</span>
               <div class="sub-action">
                 <div><input type="checkbox" name="" id="" /> Ghi nhớ</div>
                 <a routerLink="">Quên mật khẩu</a>
@@ -98,25 +137,37 @@
         </div>
         <div class="item-box" :hidden="authActive">
           <form @submit.prevent="registerAction()">
-            <div class="main-form-login">
+            <div class="main-form" :class="{'form-has-error': typeof alert != 'string'}">
               <input
                 v-model="dataRegister.name"
                 type="text"
-                formControlName="password"
+                formControlName="name"
                 placeholder="Nhập tên tài khoản..."
+                autocomplete="off"
               />
+              <span class="validate-err" v-if="alert.name">{{
+                alert.name[0]
+              }}</span>
               <input
                 v-model="dataRegister.email"
                 type="text"
                 formControlName="email"
                 placeholder="Nhập email của bạn..."
+                autocomplete="off"
               />
+              <span class="validate-err" v-if="alert.email">{{
+                alert.email[0]
+              }}</span>
               <input
                 v-model="dataRegister.password"
                 type="password"
                 formControlName="password"
                 placeholder="Nhập mật khẩu..."
+                autocomplete="off"
               />
+              <span class="validate-err" v-if="alert.password">{{
+                alert.password[0]
+              }}</span>
               <button>Đăng ký</button>
               <p id="orLogin">Hoặc</p>
               <div id="loginWithGoogle">
@@ -162,6 +213,8 @@ export default {
       headerActive: false,
       authActive: true,
       authBox: false,
+      alert: "",
+      success: false,
     };
   },
   methods: {
@@ -184,18 +237,36 @@ export default {
           this.authBox = false;
           this.checkLogin();
         })
-        .catch((err) => {
-          console.log(err);
+        .catch((error) => {
+          this.alert = error.response.data.errors;
+          if (error.response.status == 401) {
+            this.alert = error.response.data;
+          }
         });
     },
 
     registerAction() {
       apiRegister(this.dataRegister)
-        .then((res) => {
-          console.log(res);
+        .then(() => {
+          this.alert = "Đăng ký tài khoản thành công!";
+          this.success = true;
+          this.dataRegister = {};
         })
-        .catch((err) => {
-          console.log(err);
+        .then(() => {
+          setTimeout(() => {
+            this.authActive = true;
+          }, 2000);
+        })
+        .then(() => {
+          setTimeout(() => {
+            this.alert = "";
+          }, 2000);
+        })
+        .catch((error) => {
+          this.alert = error.response.data.errors;
+          if (error.response.status == 401) {
+            this.alert = error.response.data;
+          }
         });
     },
     checkLogin() {
@@ -209,13 +280,14 @@ export default {
         this.isLogin = false;
       }
     },
-    logout(){
+    logout() {
       const token = localStorage.getItem("token");
-      if(token){
-        localStorage.removeItem("token")
-        this.checkLogin()
+      if (token) {
+        localStorage.removeItem("token");
+        this.checkLogin();
+        this.alert = "";
       }
-    }
+    },
   },
   mounted() {
     this.checkPosition();

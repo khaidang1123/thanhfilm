@@ -219,11 +219,13 @@ header {
         .logged-action {
           display: none;
           position: relative;
+
           img {
             width: 35px;
             cursor: pointer;
           }
-          .nav-user{
+
+          .nav-user {
             position: absolute;
             background-color: #000;
             top: 20px;
@@ -234,23 +236,29 @@ header {
             visibility: hidden;
             opacity: 0;
             transition: .4s;
-            &.user-action-expand{
+
+            &.user-action-expand {
               transform: translateX(0px);
               opacity: 1;
               visibility: visible;
               transition: .4s;
             }
-            li{
+
+            li {
               list-style-type: none;
-              button{
+
+              button {
                 width: 100%;
                 text-align: left;
               }
-              a, button{
+
+              a,
+              button {
                 padding: 15px 10px;
                 display: block;
                 color: #fff;
-                &:hover{
+
+                &:hover {
                   border-radius: 8px;
                   box-shadow: 0 4px 10px #ffb850;
                 }
@@ -411,7 +419,7 @@ header {
   }
 
   .action-box {
-    width: 800px;
+    width: 850px;
     height: 500px;
     background-color: #2a2a32;
     border-radius: 6px;
@@ -428,6 +436,43 @@ header {
       width: 100%;
       border-right: 1px solid #444;
       position: relative;
+
+      .alert-err {
+        width: 85%;
+        margin: 25px auto;
+        padding: 8px 0;
+        border-radius: 8px;
+        color: red;
+        text-align: center;
+        border: 1px solid red;
+        background-color: #333;
+        position: absolute;
+        top: -65px;
+        left: 0;
+        width: 0%;
+        visibility: hidden;
+
+        p {
+          visibility: hidden;
+          transition: all .1s;
+        }
+
+        &.error-active {
+          width: 100%;
+          visibility: visible;
+          transition: all .1s;
+
+          p {
+            visibility: visible;
+            transition: all .1s;
+          }
+
+          &.alert-success {
+            color: rgb(8, 240, 8);
+            border: 1px solid rgb(8, 240, 8);
+          }
+        }
+      }
 
       .icon-close {
         position: absolute;
@@ -478,17 +523,26 @@ header {
           border-radius: 7px;
         }
 
-        .main-form-login {
+        .main-form {
           display: block;
           width: 100%;
           margin: auto;
           margin-top: 25px;
 
+          &.form-has-error {
+
+            input[type="text"],
+            input[type="password"],
+            button {
+              margin-top: 20px;
+            }
+          }
+
           input[type="text"],
           input[type="password"],
           button {
             width: 100%;
-            margin: 25px 0;
+            margin: 35px 0 5px 0;
             padding: 9px 0;
             display: block;
             background-color: transparent;
@@ -497,7 +551,6 @@ header {
             border: none;
             border-bottom: 1px solid #c5c5c5;
             font-size: 16px;
-            margin-top: 40px;
           }
 
           button {
@@ -507,12 +560,18 @@ header {
             border-radius: 25px;
             border: none;
           }
+
+          .validate-err {
+            color: red;
+            font-size: 14px;
+          }
         }
 
         .sub-action {
           display: flex;
           justify-content: space-between;
           color: #24A5FF;
+          margin-top: 25px;
 
           input {
             cursor: pointer;
@@ -596,4 +655,13 @@ header {
   @include mobile {
     position: fixed;
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #2a2a32 inset !important;
+  color: #fff !important;
+  background-color: #fff !important;
 }
