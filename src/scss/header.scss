@@ -29,12 +29,11 @@ header {
 
     .logo {
       .logo-pc {
-        width: 200px;
+        width: 180px;
         margin-top: 7px;
 
         @include mobile {
           display: none;
-          width: 120px;
           margin-top: 7px;
         }
       }
