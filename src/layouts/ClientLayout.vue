@@ -1,4 +1,5 @@
 <template>
+  <header-client :headerActive="headerActive" />
   <div class="container">
     <div class="wrapper">
       <header-client />
@@ -11,7 +12,7 @@
           <li class="chat">
             <img src="../assets/chat.png" alt="" />
           </li>
-          <li class="gototop" @click="goToTop()">
+          <li class="gototop" :class="{'gototop-hide': !checkBtnTop}" @click="goToTop()">
             <img src="../assets/gototop.png" alt="" />
             <span>top</span>
           </li>
@@ -29,6 +30,12 @@ export default {
     HeaderClient,
     FooterClient,
   },
+  data() {
+    return {
+      checkBtnTop: false,
+      headerActive: false
+    }
+  },
   methods: {
     goToTop() {
       window.scrollTo({
@@ -37,7 +44,24 @@ export default {
         behavior: "smooth",
       });
     },
+    checkPosition(){
+      window.onscroll = () => {
+        if(scrollY >= 50){
+          this.checkBtnTop = true
+          this.headerActive = true
+        }else{
+          this.checkBtnTop = false
+          this.headerActive = false
+        }
+      }
+    }
   },
+  mounted(){
+    this.checkPosition()
+  },
+  computed: {
+    
+  }
 };
 </script>
 <style lang="scss">
@@ -101,6 +125,9 @@ $main-bg-color-nav: #ffb850;
   }
   .gototop {
     border-bottom: none;
+    &.gototop-hide{
+      display: none;
+    }
   }
 }
 </style>

@@ -3,11 +3,7 @@
     <div class="header-main">
       <div class="logo">
         <router-link to="/">
-          <img
-            class="logo-pc"
-            src="../assets/kl-movie-logo.png"
-            alt=""
-          />
+          <img class="logo-pc" src="../assets/kl-movie-logo.png" alt="" />
           <img class="logo-mobile" src="../assets/kl-movie-logo.png" alt="" />
         </router-link>
       </div>
@@ -19,10 +15,58 @@
         <div class="header-item">
           <div class="notice">
             <span class="count-notice">1</span>
-            <font-awesome-icon icon="bell" class="bell" />
+            <font-awesome-icon
+              icon="bell"
+              class="bell"
+              @click="(noticeExpand = !noticeExpand), (historyExpand = false)"
+            />
+            <div
+              class="notice-content"
+              :class="{ 'notice-expand': noticeExpand }"
+            >
+              <div class="notice-index">1</div>
+              <div class="notice-content-right">
+                <div class="notice-content-main">
+                  Thông báo thời hạn link vip : Hiện do sever lưu trữ game của
+                  tụi mình đã tăng chi phí lên rất cao . Nên hiện tại tụi mình
+                  chỉ có thể lưu trữ game đã mua trong 6 tháng kể từ ngày mua (
+                  thay vì 1 năm trước đó ) Mong các bạn thông cảm
+                </div>
+                <div class="notice-time">01/05/2022</div>
+              </div>
+            </div>
           </div>
           <div class="history">
-            <font-awesome-icon icon="history" class="history-icon" />
+            <font-awesome-icon
+              @click="(historyExpand = !historyExpand), (noticeExpand = false)"
+              icon="history"
+              class="history-icon"
+            />
+
+            <div
+              class="history-content"
+              :class="{ 'history-expand': historyExpand }"
+            >
+              <h1>Lịch sử</h1>
+              <div class="history-content-main">
+                <div class="history-film-image">
+                  <img src="" alt="">
+                </div>
+                <div class="history-content-right">
+                  <p>Tranh thiên hạ</p>
+                  <span>Updated to 50</span>
+                </div>
+              </div>
+              <div class="history-content-main">
+                <div class="history-film-image">
+                  <img src="" alt="">
+                </div>
+                <div class="history-content-right">
+                  <p>Tranh thiên hạ</p>
+                  <span>Updated to 50</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="user" :class="{ 'logged-in': isLogin }">
@@ -88,20 +132,23 @@
         <div class="auth-direct">
           <h3
             :class="{ 'auth-active': authActive }"
-            @click="(authActive = true), (alert = ''), dataRegister = {}"
+            @click="(authActive = true), (alert = ''), (dataRegister = {})"
           >
             ĐĂNG NHẬP
           </h3>
           <h3
             :class="{ 'auth-active': !authActive }"
-            @click="(authActive = false), (alert = ''), dataLogin = {}"
+            @click="(authActive = false), (alert = ''), (dataLogin = {})"
           >
             ĐĂNG KÝ
           </h3>
         </div>
         <div class="item-box" :hidden="!authActive">
           <form @submit.prevent="loginAction()">
-            <div class="main-form" :class="{'form-has-error': typeof alert != 'string'}">
+            <div
+              class="main-form"
+              :class="{ 'form-has-error': typeof alert != 'string' }"
+            >
               <input
                 v-model="dataLogin.email"
                 type="text"
@@ -137,7 +184,10 @@
         </div>
         <div class="item-box" :hidden="authActive">
           <form @submit.prevent="registerAction()">
-            <div class="main-form" :class="{'form-has-error': typeof alert != 'string'}">
+            <div
+              class="main-form"
+              :class="{ 'form-has-error': typeof alert != 'string' }"
+            >
               <input
                 v-model="dataRegister.name"
                 type="text"
@@ -196,6 +246,7 @@ import {
   getUser,
 } from "../api/ApiUser";
 export default {
+  props: ['headerActive'],
   data() {
     return {
       dataLogin: {
@@ -210,23 +261,15 @@ export default {
       userInfo: "",
       isLogin: false,
       isUserActionExpand: false,
-      headerActive: false,
       authActive: true,
       authBox: false,
+      noticeExpand: false,
+      historyExpand: false,
       alert: "",
       success: false,
     };
   },
   methods: {
-    checkPosition() {
-      window.onscroll = () => {
-        if (scrollY > 0) {
-          this.headerActive = true;
-        } else {
-          this.headerActive = false;
-        }
-      };
-    },
     loginAction() {
       apiLogin(this.dataLogin)
         .then((res) => {
@@ -290,7 +333,6 @@ export default {
     },
   },
   mounted() {
-    this.checkPosition();
     this.checkLogin();
   },
 };

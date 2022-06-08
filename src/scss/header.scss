@@ -1,6 +1,24 @@
 @import "./responsive-homepage.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
+%headerItemExpand {
+  display: none;
+  position: absolute;
+  background-color: #3a3a3a;
+  color: #fff;
+  top: 45px;
+  left: -100px;
+  width: 320px;
+  margin: auto;
+  grid-template-columns: 60px 1fr;
+  padding: 15px 0;
+  margin: auto;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 15px;
+  cursor: auto;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -133,6 +151,7 @@ header {
         align-items: center;
 
         .history {
+          position: relative;
           background-color: #4c4c4c;
           padding: 7px 9px;
           border-radius: 50%;
@@ -146,6 +165,55 @@ header {
 
           .history-icon {
             font-size: 22px;
+          }
+
+          .history-content {
+            @extend %headerItemExpand;
+
+            &.history-expand {
+              display: block;
+            }
+
+            h1 {
+              text-align: center;
+              font-weight: 500;
+              margin-bottom: 10px;
+              color: yellow;
+            }
+
+            .history-content-main {
+              margin-top: 10px;
+              display: grid;
+              grid-template-columns: 100px 1fr;
+              background-color: rgb(193, 193, 8);
+              width: 100%;
+              color: #000;
+              border-radius: 3px;
+              cursor: pointer; 
+              padding: 5px 0;
+
+              p {
+                font-size: 20px;
+                font-weight: 600;
+              }
+
+              span {
+                margin-top: 15px;
+                display: block;
+              }
+            }
+
+            .history-film-image {
+              text-align: center;
+              background-color: #999;
+              width: 40px;
+              height: 40px;
+              margin: auto;
+              line-height: 40px;
+              font-size: 20px;
+              border-radius: 50%;
+            }
+
           }
         }
 
@@ -162,6 +230,32 @@ header {
 
           @include mobile {
             margin-left: 45px;
+          }
+
+          .notice-content {
+            @extend %headerItemExpand;
+            padding: 15px 10px 15px 0;
+            &.notice-expand {
+              display: grid;
+            }
+
+            .notice-index {
+              text-align: center;
+              background-color: #999;
+              width: 40px;
+              height: 40px;
+              margin: auto;
+              line-height: 40px;
+              font-size: 20px;
+              border-radius: 50%;
+            }
+
+            .notice-time {
+              margin-top: 10px;
+              display: block;
+              color: #777;
+              font-size: 14px;
+            }
           }
 
           .count-notice {
