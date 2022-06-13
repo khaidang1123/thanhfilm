@@ -25,11 +25,12 @@
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1",
     "slick-vuejs": "^1.0.9",
-    "vue": "^3.2.36",
+    "vue": "^3.2.37",
     "vue-ionicons": "^3.0.5",
     "vue-router": "^4.0.15",
     "vue-slick-carousel": "^1.0.6",
-    "vue3-carousel": "^0.1.40"
+    "vue3-carousel": "^0.1.40",
+    "vue3-google-oauth2": "^1.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

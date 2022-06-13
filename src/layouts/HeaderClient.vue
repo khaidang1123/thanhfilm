@@ -50,7 +50,7 @@
               <h1>Lịch sử</h1>
               <div class="history-content-main">
                 <div class="history-film-image">
-                  <img src="" alt="">
+                  <img src="" alt="" />
                 </div>
                 <div class="history-content-right">
                   <p>Tranh thiên hạ</p>
@@ -59,7 +59,7 @@
               </div>
               <div class="history-content-main">
                 <div class="history-film-image">
-                  <img src="" alt="">
+                  <img src="" alt="" />
                 </div>
                 <div class="history-content-right">
                   <p>Tranh thiên hạ</p>
@@ -175,7 +175,7 @@
               </div>
               <button>Đăng nhập</button>
               <p id="orLogin">Hoặc</p>
-              <div id="loginWithGoogle">
+              <div id="loginWithGoogle" @click="loginWithGoogle()">
                 <img src="../assets/logo-google.png" alt="" />
                 <span> Đăng nhập với google </span>
               </div>
@@ -246,7 +246,7 @@ import {
   getUser,
 } from "../api/ApiUser";
 export default {
-  props: ['headerActive'],
+  props: ["headerActive"],
   data() {
     return {
       dataLogin: {
@@ -316,8 +316,12 @@ export default {
       const token = localStorage.getItem("token");
       if (token) {
         getUser(token).then((res) => {
-          this.userInfo = res.data;
-          this.isLogin = true;
+          if (res.data) {
+            this.userInfo = res.data;
+            this.isLogin = true;
+          }else{
+            this.isLogin = false
+          }
         });
       } else {
         this.isLogin = false;
@@ -331,6 +335,9 @@ export default {
         this.alert = "";
       }
     },
+    loginWithGoogle(){
+      this.gAuth
+    }
   },
   mounted() {
     this.checkLogin();

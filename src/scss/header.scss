@@ -189,7 +189,7 @@ header {
               width: 100%;
               color: #000;
               border-radius: 3px;
-              cursor: pointer; 
+              cursor: pointer;
               padding: 5px 0;
 
               p {
@@ -235,6 +235,7 @@ header {
           .notice-content {
             @extend %headerItemExpand;
             padding: 15px 10px 15px 0;
+
             &.notice-expand {
               display: grid;
             }
@@ -361,12 +362,12 @@ header {
         }
 
         &.logged-in {
-          .logged-action {
-            display: inline;
-          }
-
           button {
             display: none;
+          }
+
+          .logged-action {
+            display: inline;
           }
         }
       }

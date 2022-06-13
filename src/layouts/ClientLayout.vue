@@ -2,7 +2,6 @@
   <header-client :headerActive="headerActive" />
   <div class="container">
     <div class="wrapper">
-      <header-client />
       <main>
         <router-view></router-view>
       </main>

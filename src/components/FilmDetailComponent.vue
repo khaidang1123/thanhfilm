@@ -433,6 +433,11 @@ export default {
     },
   },
   mounted() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
     $(".list-espisode span")[0].classList.add("active-espisode");
     $(".item").hover(
       (e) => {
@@ -447,6 +452,7 @@ export default {
       }
     );
   },
+
 };
 </script>
 <style lang="scss" scoped>
