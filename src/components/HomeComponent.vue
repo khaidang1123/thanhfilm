@@ -86,45 +86,94 @@
               </div>
             </div>
             <div class="item">
-              <img src="https://bilutv.link/film/20605/poster.jpg" alt="" />
-              <div class="count-star">
-                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              <router-link to="/phim/a">
+                <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+                <div class="count-star">
+                  <span>4.5</span>
+                  <font-awesome-icon icon="star" class="star" />
+                </div>
+              </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
             </div>
             <div class="item">
-              <img src="https://bilutv.link/film/20603/poster.jpg" alt="" />
-              <div class="count-star">
-                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              <router-link to="/phim/a">
+                <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+                <div class="count-star">
+                  <span>4.5</span>
+                  <font-awesome-icon icon="star" class="star" />
+                </div>
+              </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
             </div>
             <div class="item">
-              <img src="https://bilutv.link/film/20529/poster.jpg" alt="" />
-              <div class="count-star">
-                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              <router-link to="/phim/a">
+                <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+                <div class="count-star">
+                  <span>4.5</span>
+                  <font-awesome-icon icon="star" class="star" />
+                </div>
+              </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
             </div>
             <div class="item">
-              <img src="https://bilutv.link/film/20615/poster.jpg" alt="" />
-              <div class="count-star">
-                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              <router-link to="/phim/a">
+                <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+                <div class="count-star">
+                  <span>4.5</span>
+                  <font-awesome-icon icon="star" class="star" />
+                </div>
+              </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
             </div>
             <div class="item">
-              <img src="https://bilutv.link/film/20611/poster.jpg" alt="" />
-              <div class="count-star">
-                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              <router-link to="/phim/a">
+                <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+                <div class="count-star">
+                  <span>4.5</span>
+                  <font-awesome-icon icon="star" class="star" />
+                </div>
+              </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
             </div>
             <div class="item">
-              <img src="https://bilutv.link/film/20405/poster.jpg" alt="" />
-              <div class="count-star">
-                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              <router-link to="/phim/a">
+                <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+                <div class="count-star">
+                  <span>4.5</span>
+                  <font-awesome-icon icon="star" class="star" />
+                </div>
+              </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
             </div>
             <div class="item">
-              <img src="https://bilutv.link/film/20647/poster.jpg" alt="" />
-              <div class="count-star">
-                <span>4.5</span> <font-awesome-icon icon="star" class="star" />
+              <router-link to="/phim/a">
+                <img src="https://bilutv.link/film/20643/poster.jpg" alt="" />
+                <div class="count-star">
+                  <span>4.5</span>
+                  <font-awesome-icon icon="star" class="star" />
+                </div>
+              </router-link>
+              <div class="film-content">
+                <h3 class="name">Tân tây du ký</h3>
+                <span class="desc">Siêu phẩm tân tây du kí với...</span>
               </div>
             </div>
           </div>

@@ -175,7 +175,7 @@
               </div>
               <button>Đăng nhập</button>
               <p id="orLogin">Hoặc</p>
-              <div id="loginWithGoogle" @click="loginWithGoogle()">
+              <div @click="SigninWithGoogle()" id="loginWithGoogle">
                 <img src="../assets/logo-google.png" alt="" />
                 <span> Đăng nhập với google </span>
               </div>
@@ -242,9 +242,11 @@
 <script>
 import {
   login as apiLogin,
+  signinWithGoogle as googleSignin,
   register as apiRegister,
   getUser,
 } from "../api/ApiUser";
+
 export default {
   props: ["headerActive"],
   data() {
@@ -267,6 +269,7 @@ export default {
       historyExpand: false,
       alert: "",
       success: false,
+      user: ""
     };
   },
   methods: {
@@ -319,8 +322,8 @@ export default {
           if (res.data) {
             this.userInfo = res.data;
             this.isLogin = true;
-          }else{
-            this.isLogin = false
+          } else {
+            this.isLogin = false;
           }
         });
       } else {
@@ -335,9 +338,13 @@ export default {
         this.alert = "";
       }
     },
-    loginWithGoogle(){
-      this.gAuth
-    }
+    SigninWithGoogle() {
+      googleSignin().then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.log(err)
+      })
+    },
   },
   mounted() {
     this.checkLogin();

@@ -1,7 +1,10 @@
 <template>
   <div class="film-detail fluid">
     <div class="film-detail-top">
-      <div class="main-video"></div>
+      <div class="main-video">
+        <iframe width="96%" height="100%" src="//ok.ru/videoembed/4644813081292" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+        <!-- <video src="../assets/ff.mp4" controls></video> -->
+      </div>
 
       <div class="title-mobile">
         <h3 class="film-name-mobile">Tranh thiên hạ</h3>
