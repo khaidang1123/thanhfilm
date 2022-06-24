@@ -21,15 +21,12 @@ const routes = [
             { path: '/phim/:slug', component: FilmDetailComponent },
         ],
     },
-    // {
-    //     path: "/user"
-    // }
     {
         path: '/admin', component: DashboardComponent, children: [
             { path: "", component: UserManageComponent }
         ]
     },
-    { path: '/:catchAll(.*)', redirect: '/' }
+    { path: '/:catchAll(.*)', redirect: '/' },
 ]
 
 const router = createRouter({
@@ -42,7 +39,6 @@ library.add(faSearch, faBell, faHome, history, faBars, faFire,
 const app = createApp(App)
 
 const gAuthOptions = { clientId: '936735842551-3pl6s4lvj75ssaua4dec69h7q1t8c7up.apps.googleusercontent.com', scope: 'email', prompt: 'consent', fetch_basic_profile: false }
-
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.config.productionTip = false;
 app.use(router, $, gAuthOptions)

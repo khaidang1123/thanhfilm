@@ -112,7 +112,7 @@
         <div
           class="alert-err"
           :class="{
-            'error-active': alert.length > 0,
+            'error-active': alert && alert.length > 0,
             'alert-success': success,
           }"
         >
