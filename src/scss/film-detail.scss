@@ -64,6 +64,14 @@
         display: grid;
         grid-template-columns: 70% 30%;
 
+        iframe{
+            width: 96%;
+            height: 100%;
+            @include mobile{
+                width: 100%;
+            }
+        }
+
         .title-mobile {
             width: 96%;
             margin: auto;
@@ -96,13 +104,17 @@
             // background-color: #000;
             height: 500px;
             video{
-                width: 100%;
+                width: 500px !important;
                 z-index: 10000;
             }
 
             @include mobile {
                 height: 250px;
                 margin-top: 10px;
+            }
+            img{
+                width: 100% !important;
+                right: 0 !important;
             }
         }
 

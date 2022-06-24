@@ -4,7 +4,7 @@
       <div class="main-video">
         <!-- <iframe width="96%" height="100%" src="//ok.ru/videoembed/4644813081292" frameborder="0" allow="autoplay" allowfullscreen></iframe> -->
         <!-- <video src="../assets/ff.mp4" controls></video> -->
-        <iframe width="96%" height="100%" src="//ok.ru/videoembed/4655401732812" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="//ok.ru/videoembed/4655401732812" frameborder="0" allow="autoplay" allowfullscreen></iframe>
       </div>
 
       <div class="title-mobile">
