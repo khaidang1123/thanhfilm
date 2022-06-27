@@ -13,12 +13,14 @@ import FilmDetailComponent from './components/FilmDetailComponent.vue'
 import ClientLayout from './layouts/ClientLayout.vue'
 import DashboardComponent from './components/admin/DashboardComponent.vue'
 import UserManageComponent from './components/admin/UserManageComponent.vue'
+import ProfileComponent from './components/ProfileComponent.vue'
 const $ = require('jquery');
 const routes = [
     {
         path: '/', component: ClientLayout, children: [
             { path: "", component: HomeComponent },
             { path: '/phim/:slug', component: FilmDetailComponent },
+            { path: '/profile', component: ProfileComponent}
         ],
     },
     {

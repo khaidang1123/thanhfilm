@@ -1,0 +1,142 @@
+@import "./responsive-homepage.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+section {
+    .profile-content {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        padding-top: 100px;
+
+        .profile-left {
+            .avatar {
+                display: block;
+                margin: auto;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .avatar-image {
+                width: 100%;
+            }
+
+            .avatar-action {
+                display: block;
+                text-align: center;
+
+                button {
+                    width: 120px;
+                    height: 30px;
+                    margin: 15px;
+                    cursor: pointer;
+                    border-radius: 6px;
+                }
+
+                .remove-image {
+                    background-color: red;
+                    color: #fff;
+                    border: none;
+                }
+
+                .change-image {
+                    background-color: green;
+                    color: #fff;
+                    border: none;
+                }
+            }
+
+            .info {
+                text-align: center;
+                color: #fff;
+
+                p {
+                    margin: 15px 0;
+                }
+
+                a {
+                    color: #3ba1da;
+                }
+
+                .verified {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 15px 0 40px;
+
+                    img {
+                        width: 25px;
+                        align-items: center;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .profile-right {
+            color: #fff;
+            margin-left: 25px;
+
+            .profile-top {
+                display: flex;
+                justify-content: space-between;
+                h4 {
+                    font-size: 28px !important;
+                    margin-bottom: 25px;
+                }
+                button{
+                    width: 120px;
+                    height: 30px;
+                    cursor: pointer;
+                    border-radius: 8px;
+                    background-color: #3ba1da;
+                    outline: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            li {
+                list-style-type: none;
+                padding: 20px 0;
+                border-bottom: 1px solid #777;
+                margin-left: 25px;
+
+                label {
+                    display: inline-block;
+                    width: 120px;
+                }
+
+                input {
+                    width: 50%;
+                    height: 35px;
+                    border-radius: 5px;
+                    outline: none;
+                    text-indent: 15px;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 16px;
+                    color: yellow;
+                    pointer-events: none;
+                    &.enableEdit{
+                        pointer-events: unset;
+                    }
+                }
+            }
+            button{
+                float: right;
+                margin: 20px 0;
+                width: 150px;
+                height: 35px;
+                font-size: 18px;
+                border-radius: 5px;
+                background-color: green;
+                font-weight: 500;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

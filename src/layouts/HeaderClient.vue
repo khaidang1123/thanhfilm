@@ -88,7 +88,7 @@
               :class="{ 'user-action-expand': isUserActionExpand }"
             >
               <li>
-                <routerLink to="">Xin chào: {{ userInfo.name }}</routerLink>
+                <routerLink to="/profile">Xin chào: {{ userInfo.name }}</routerLink>
               </li>
               <li><routerLink to="">Quản lý tài khoản</routerLink></li>
               <li><routerLink to="">Đổi mật khẩu</routerLink></li>

@@ -1,5 +1,11 @@
 <template>
-  <h1></h1>
+    <footer>
+        <div class="logo"></div>
+        <div class="information"></div>
+        <div class="cate_film">
+          
+        </div>
+    </footer>
 </template>
 
 <script>
