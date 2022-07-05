@@ -3,16 +3,7 @@
     <div class="film-detail-top">
       <div class="main-video">
         <!-- <iframe width="96%" height="100%" src="//ok.ru/videoembed/4644813081292" frameborder="0" allow="autoplay" allowfullscreen></iframe> -->
-        <!-- <iframe src="//ok.ru/videoembed/4655401732812" frameborder="0" allow="autoplay" allowfullscreen></iframe> -->
-        vckut5arHq |
-        <iframe
-          width="96%"
-          height="100%"
-          src="https://short.ink/vckut5arHq"
-          frameborder="0"
-          scrolling="0"
-          allowfullscreen
-        ></iframe>
+        <iframe src="//ok.ru/videoembed/4655401732812" frameborder="0" allow="autoplay" allowfullscreen></iframe>
       </div>
 
       <div class="title-mobile">

@@ -33,8 +33,9 @@
               <label for="">Tên đăng nhập:</label>
               <input
                 type="text"
-                v-model="profile.username"
+                v-model="profile.user_name"
                 :class="{ enableEdit: checkEdit }"
+                ref="user_name"
               />
             </li>
             <li>
@@ -42,8 +43,6 @@
               <input
                 type="text"
                 v-model="profile.email"
-                :class="{ enableEdit: checkEdit }"
-                ref="email"
               />
             </li>
             <li>
@@ -52,6 +51,7 @@
                 type="text"
                 v-model="profile.phone_number"
                 :class="{ enableEdit: checkEdit }"
+                placeholder="Chưa thiết lập"
               />
             </li>
             <li>
@@ -60,12 +60,13 @@
                 type="text"
                 v-model="profile.address"
                 :class="{ enableEdit: checkEdit }"
+                placeholder="Chưa thiết lập"
               />
             </li>
             <li>
               <label for="">Ngày sinh:</label>
               <input
-                type="text"
+                type="date"
                 v-model="profile.birthday"
                 :class="{ enableEdit: checkEdit }"
               />
@@ -92,11 +93,11 @@ export default {
   data: () => {
     return {
       profile: {
-        user_name: "khaidang",
+        user_name: "",
         email: "khaiddph15544@fpt.edu.vn",
-        phone_number: "0962597441",
-        address: "Đoan Hùng - Phú Thọ",
-        birthday: "12 - 10 - 2002",
+        phone_number: "",
+        address: "",
+        birthday: new Date(),
         gender: 1,
       },
       checkEdit: false,
@@ -109,17 +110,29 @@ export default {
         return;
       } else {
         getInfo(token).then((res) => {
+          this.profile.user_name = res.data.name
           this.profile.email = res.data.email;
           this.profile.gender = this.profile.gender == 1 ? "Nam" : "Nữ";
+          this.profile.phone_number = res.data.phone
         });
       }
     },
     enableEdit() {
       this.checkEdit = true;
-      this.$refs.email.focus();
+      this.$refs.user_name.focus();
     },
   },
+  beforeMount(){
+    if(this.profile.user_name != "aaa"){
+      this.$router.push({path: ''})
+    }
+  },
   mounted() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    })
     this.getUser();
   },
 };

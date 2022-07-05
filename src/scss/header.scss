@@ -664,11 +664,14 @@ header {
         .sub-action {
           display: flex;
           justify-content: space-between;
-          color: #24A5FF;
           margin-top: 25px;
 
-          input {
+          input,
+          a,
+          span {
             cursor: pointer;
+            color: #24A5FF;
+
           }
         }
 

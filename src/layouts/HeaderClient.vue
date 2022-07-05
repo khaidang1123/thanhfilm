@@ -88,10 +88,20 @@
               :class="{ 'user-action-expand': isUserActionExpand }"
             >
               <li>
-                <routerLink to="/profile" @click="isUserActionExpand = false">Xin chào: {{ userInfo.name }}</routerLink>
+                <routerLink to="/profile" @click="isUserActionExpand = false"
+                  >Xin chào: {{ userInfo.name }}</routerLink
+                >
               </li>
-              <li><routerLink to="" @click="isUserActionExpand = false">Quản lý tài khoản</routerLink></li>
-              <li><routerLink to="" @click="isUserActionExpand = false">Đổi mật khẩu</routerLink></li>
+              <li>
+                <routerLink to="" @click="isUserActionExpand = false"
+                  >Quản lý tài khoản</routerLink
+                >
+              </li>
+              <li>
+                <routerLink to="" @click="isUserActionExpand = false"
+                  >Đổi mật khẩu</routerLink
+                >
+              </li>
               <li>
                 <button @click="logout(), (isUserActionExpand = false)">
                   Đăng xuất
@@ -170,8 +180,10 @@
                 alert.password[0]
               }}</span>
               <div class="sub-action">
-                <div><input type="checkbox" name="" id="" /> Ghi nhớ</div>
-                <a routerLink="">Quên mật khẩu</a>
+                <label for="remember_me">
+                  <input type="checkbox" name="" id="remember_me" /> <span>Ghi nhớ</span>
+                </label>
+                <router-link to="">Quên mật khẩu</router-link>
               </div>
               <button>Đăng nhập</button>
               <p id="orLogin">Hoặc</p>
@@ -269,7 +281,7 @@ export default {
       historyExpand: false,
       alert: "",
       success: false,
-      user: ""
+      user: "",
     };
   },
   methods: {
@@ -339,11 +351,13 @@ export default {
       }
     },
     SigninWithGoogle() {
-      googleSignin().then(res => {
-        console.log(res)
-      }).catch(err => {
-        console.log(err)
-      })
+      googleSignin()
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
   },
   mounted() {
